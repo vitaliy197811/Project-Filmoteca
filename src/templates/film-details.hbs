@@ -1,0 +1,61 @@
+{{#each this}}
+  <li class='film-card' data-source='{{id}}'>
+    <a class='film-card__link'>
+      <picture class='film-card__img-zaglushka'>
+        {{#if poster_path}}
+          <source
+            srcset='https://image.tmdb.org/t/p/w500{{poster_path}}'
+            loading="lazy"
+            media='(min-width: 1024px)'
+          />
+          <source
+            srcset='https://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}'
+            loading="lazy"
+            media='(min-width: 768px)'
+          />
+          <source
+            srcset='https://image.tmdb.org/t/p/w220_and_h330_face{{poster_path}}'
+            loading="lazy"
+            media='(min-width: 320px)'
+          />
+          <img
+            {{!-- data-source='{{id}}' --}}
+            class='film-image'
+            loading="lazy"
+            src='https://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}'
+            alt='film poster'
+          />
+        {{else}}
+          <img
+            class='film-card__img-zaglushka film-image'
+            loading="lazy"
+            src='https://i.postimg.cc/6pzyh7Wc/pngwing-com.png'
+            alt='film poster'
+          />
+        {{/if}}
+      </picture>
+
+      <div class='film-card__discribe-container'>
+      {{#if title}}
+      <h3 class='film-card__film-name js-film-card__film-name'>{{title}}</h3>
+      {{else}}
+      <h3 class='film-card__film-name js-film-card__film-name'>{{original_title}}</h3>
+      {{/if}}
+      <div class='film-card__film-caption'>
+        <ul class='film-card__film-items'>
+            <li class='film-card__film-item'>{{genre_ids}}</li>
+        </ul>
+        <span class='film-card__film-date'>{{release_date}}</span>
+        <span class='film-card__film-rating'>{{vote_average}}</span>
+      </div>
+
+      {{!-- <div class='film-card__discribe-container'>
+        <h3 class='film-card__film-name'>{{title}}</h3>
+        <p class='film-card__film-ganre'>{{genre_ids}}
+          |
+          {{release_date}}
+          <span class='film-card__film-rating'>{{vote_average}}</span></p>
+      </div> --}}
+    </a>
+  </li>
+{{/each}}

@@ -1,0 +1,111 @@
+<header class="header">
+  <div class="container header-container">
+    <!-- Навігація хедера -->
+    <div class="page-header">
+      <a class="page-header__logo js-logo" href="#">
+        <span class="old-film">
+          <span class="old-film__lenta">
+            <svg class="page-header__icon" width="24" height="24">
+              <use href="./images/svg/film.svg"></use>
+            </svg>
+            <svg class="page-header__icon--second" width="24" height="24">
+              <use href="./images/svg/film.svg"></use>
+            </svg>
+            <svg class="page-header__icon--tree" width="24" height="24">
+              <use href="./images/svg/film.svg"></use>
+            </svg>
+            <svg class="page-header__icon--second" width="24" height="24">
+              <use href="./images/svg/film.svg"></use>
+            </svg>
+          </span>
+        </span>
+
+        <span class="page-header__text js-logo-leng">Filmoteka</span>
+      </a>
+      <nav class="page-header__nav">
+        <button
+          class="button-nav button-nav--current button-nav--home js-home"
+          type="button"
+          name="home"
+        >
+          HOME
+        </button>
+        <button class="button-nav js-library" type="button" name="library">MY LIBRARY</button>
+      </nav>
+    </div>
+    <!-- ***********этот див будет исчезать из верстки в библиотеке****************** -->
+    <div class="buttons-header visually-hidden js-blok-btnheader">
+      <button class="watched-btn js-watched-header back-orange" type="button">Watched</button>
+      <button class="queue-btn js-queue-header back-dark" type="button">Queue</button>
+    </div>
+    <!-- *****************этот див будет исчезать из верстки в библиотеке************************** -->
+    <div class="search-block js-blok-search">
+      <form class="search-block__form">
+        <input
+          id="inputname"
+          class="form-input"
+          type="text"
+          name="search"
+          placeholder="Search film"
+          autocomplete="off"
+        />
+        <!-- *****************этот див для увидомления при поиске************************** -->
+        <div class="notification notification-none">
+          <p class="notification-text">Search result failed. Enter the correct movie title and</p>
+        </div>
+        <!-- повесим слушатель события дебоунс на инпут текста -->
+        <!-- <button class="form-btn" type="submit" name="search-btn"></button> -->
+        <svg class="form-btn" width="12" height="12">
+          <use href="./images/svg/search 2.svg"></use>
+        </svg>
+      </form>
+      <!-- Показуэмо цей блок якщо пошук не дав результатів -->
+      <p class="search-block__notification visually-hidden js-error-search">
+        Search result not successful. Enter the correct movie name and
+      </p>
+    </div>
+    <!-- Блок бібліотеки показуєм при переключенні по кнопці library  -->
+    <div class="library-block visually-hidden js-blok-library">
+      <button class="library-block__btn js-watched" type="submit" name="watched">WATCHED</button>
+      <button class="library-block__btn js-queue" type="submit" name="queue">QUEUE</button>
+    </div>
+    
+    <!-- дивы ниже для настроек сайта переключение языка и темы. прошу спозиционировать их абсолютом от правого нижнего края хедера и от левого соответственно -->
+
+    <div class="language js-language">
+      <!-- два дива расположены в ряд если нажат один он становиться крупнее второго и ярче добавляем тему curent-language -->
+      <div class="en curent-language js-en">
+        <svg class="en__icon" width="24" height="24">
+          <use href="./images/svg/British_Flag_clip_art.svg"></use>
+        </svg>
+        <p>EN</p>
+      </div>
+      <div class="ua js-ua">
+        <p>UA</p>
+        <svg class="ua__icon" width="24" height="24">
+          <use href="./images/svg/Ukraine_clip_art.svg"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="thema">
+      <!-- две свгшки сменяют друг друга при клике по кнопке -->
+      <div class="time">
+        <!-- в js вешаем клас curent-time анимирующий смену суток -->
+        <svg class="sol js-son" width="24" height="24">
+          <use href="./images/svg/cool.svg"></use>
+        </svg>
+        <svg class="moon js-moon curent-time" width="24" height="24">
+          <use href="./images/svg/cool2.svg"></use>
+        </svg>
+      </div>
+      <!-- текстконтент чекбокса меняеться при каждом клике son/moon -->
+      <!-- кнопку сделать максимально прозрачной без бортов и незаметной -->
+      <label class="switch">
+        <input type="checkbox" class="js-thema" />
+        <span class="slider round"></span>
+      </label>
+      <!-- <button class="js-thema">son</button> -->
+    </div>
+  </div>
+</header>

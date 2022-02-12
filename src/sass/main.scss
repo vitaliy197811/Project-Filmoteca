@@ -1,0 +1,20 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+@import './utilites/colors';
+@import './base/base_style';
+@import './base/container';
+@import './layout/header';
+@import './layout/render-section.scss';
+@import './utilites/pagination.scss';
+@import './layout/footer.scss';
+@import './utilites/modal-close-btn';
+
+@import './modal/footer-modal';
+@import './modal/modal-info';
+@import './modal/modal-youtube';
+@import './utilites/loader';
+@import './utilites/scroll-top';

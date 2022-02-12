@@ -1,0 +1,47 @@
+.up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 7;
+  border-radius: 50%;
+  padding: 25px;
+  cursor: pointer;
+  border: 3px solid $accent-color;
+  transition: border-color 200ms linear, opacity 200ms linear, box-shadow 200ms linear;
+  opacity: 0.5;
+  visibility: visible;
+  background-color: transparent;
+  box-shadow: 0 0 7px 2px $accent-color;
+
+  &:after,
+  &:before {
+    position: absolute;
+    background-color: $accent-color;
+    left: 50%;
+    width: 5px;
+    height: 22px;
+    top: 11px;
+    margin-left: -8px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    transition: background-color 200ms linear;
+    content: '';
+  }
+  &:after {
+    width: 21px;
+    height: 5px;
+    margin-left: -4px;
+    top: 19px;
+  }
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 0 15px 5px $accent-color;
+    opacity: 0.8;
+
+    &::after,
+    &:before {
+      background-color: $accent-color;
+    }
+  }
+}

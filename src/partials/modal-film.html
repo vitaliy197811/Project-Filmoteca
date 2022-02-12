@@ -1,0 +1,56 @@
+<article class="modal-box">
+  <div id="backdropFilmCard" class="backdrop visually-hidden">
+    <div class="modal-film__full-info js-modal-film__full-info">
+      <button class="close-button js-close-modal-info" type="button">
+        <svg class="close-button-svg" width="18" height="18">
+          <use href="./images/svg/close-btn.svg"></use>
+        </svg>
+      </button>
+      <div class="pic js-prewiu-img">
+        <img
+          src="./images/no-foto.png"
+          loading="lazy"
+          data-source=""
+          alt="poster"
+          class="modal-img js-current-film-poster"
+        />
+        <div class="youtube">
+          <img src="./images/yout.png" data-source="" alt="youtube button" class="youtube-img" />
+        </div>
+      </div>
+      <div class="film-info">
+        <div class="film-name js-current-film-name"></div>
+        <table class="film-spec">
+          <tbody>
+            <tr>
+              <td class="film-spec__name js-vote">Vote / Votes</td>
+              <td class="film-spec__value--numd">
+                <span class="film-card__film-rating js-current-film-rate"></span>/<span
+                  class="film-card__film-votes js-current-film-votes"
+                ></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="film-spec__name js-popularity">Popularity</td>
+              <td class="film-spec__value--numd js-current-film-popul"></td>
+            </tr>
+            <tr>
+              <td class="film-spec__name js-title">Original Title</td>
+              <td class="film-spec__value--text js-current-film-title"></td>
+            </tr>
+            <tr>
+              <td class="film-spec__name js-genre">Genre</td>
+              <td class="film-spec__value--text js-current-film-ganre"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="about js-about__leng js-about">About</div>
+        <div class="about-text js-about__api"></div>
+        <div class="buttons">
+          <button class="add-to-watched-btn js-watched-modal" type="button">add to Watched</button>
+          <button class="add-to-queue-btn js-queue-modal" type="button">add to queue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
